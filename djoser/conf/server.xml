@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Server port="${shutdown.port}" shutdown="SHUTDOWN">
+
+  <Listener className="org.apache.catalina.core.JasperListener" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.ServerLifecycleListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+
+  <Listener className="com.springsource.tcserver.serviceability.rmi.JmxSocketListener"
+            port="${jmx.port}"
+            bind="127.0.0.1" 
+            useSSL="false" 
+            passwordFile="${catalina.base}/conf/jmxremote.password"
+            accessFile="${catalina.base}/conf/jmxremote.access" 
+            authenticate="true"/>
+
+  <Listener className="com.springsource.tcserver.serviceability.deploy.TcContainerDeployer" />
+
+  <GlobalNamingResources>
+    <Resource name="UserDatabase" auth="Container"
+              type="org.apache.catalina.UserDatabase"
+              description="User database that can be updated and saved"
+              factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
+              pathname="conf/tomcat-users.xml" />
+  </GlobalNamingResources>
+
+  <Service name="Catalina">
+  
+    <Executor name="tomcatThreadPool" namePrefix="tomcat-http--" maxThreads="300" minSpareThreads="50"/>
+
+    <Connector executor="tomcatThreadPool"
+               port="${http.port}" 
+               protocol="HTTP/1.1" 
+               connectionTimeout="20000" 
+               redirectPort="${https.port}" 
+               acceptCount="100"
+               maxKeepAliveRequests="15"/>
+
+    <Engine name="Catalina" defaultHost="localhost">
+
+      <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+             resourceName="UserDatabase"/>
+
+      <Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true" deployOnStartup="true" deployXML="true" 
+            xmlValidation="false" xmlNamespaceAware="false">
+      </Host>
+    </Engine>
+  </Service>
+</Server>

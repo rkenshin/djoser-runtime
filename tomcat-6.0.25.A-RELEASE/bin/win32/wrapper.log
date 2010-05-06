@@ -1,0 +1,10 @@
+FATAL  | wrapper  | 2010/05/02 12:56:31 | Unable to open configuration file. D:\dev\projects\djoser-runtime"djoser\conf\wrapper.conf -Xmx512M -Xms256M -XX:MaxPermSize=256M  set.CATALINA_BASE=D:\dev\projects\djoser-runtime"djoser
+FATAL  | wrapper  | 2010/05/02 12:56:44 | Unable to open configuration file. D:\dev\projects\djoser-runtime"djoser\conf\wrapper.conf -Xmx512M -Xms256M -XX:MaxPermSize=256M  set.CATALINA_BASE=D:\dev\projects\djoser-runtime"djoser
+FATAL  | wrapper  | 2010/05/02 12:58:55 | Unable to open configuration file. D:\dev\projects\djoser-runtime"djoser\conf\wrapper.conf -Xmx512M -Xms256M -XX:MaxPermSize=256M  set.CATALINA_BASE=D:\dev\projects\djoser-runtime"djoser
+FATAL  | wrapper  | 2010/05/02 12:59:16 | Unable to open configuration file. D:\dev\projects\djoser-runtime"djoser\conf\wrapper.conf -Xmx512M -Xms256M -XX:MaxPermSize=256M  set.CATALINA_BASE=D:\dev\projects\djoser-runtime"djoser
+FATAL  | wrapper  | 2010/05/02 13:00:17 | The argument '-Xmx512M' is not a valid property name-value pair.
+FATAL  | wrapper  | 2010/05/02 13:00:47 | The argument '-Xmx512M' is not a valid property name-value pair.
+FATAL  | wrapper  | 2010/05/02 13:03:16 | The argument '-Xmx512M' is not a valid property name-value pair.
+FATAL  | wrapper  | 2010/05/02 13:03:17 | The argument '-Xmx512M' is not a valid property name-value pair.
+FATAL  | wrapper  | 2010/05/02 13:05:13 | The argument '-Xmx512M' is not a valid property name-value pair.
+FATAL  | wrapper  | 2010/05/03 08:40:27 | The argument '-Xmx512M' is not a valid property name-value pair.
