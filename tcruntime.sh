@@ -11,7 +11,7 @@
 DJOSERRUNTIME_VER=6.0.25.A-RELEASE
 syntax () {
   echo "Usage:"
-  echo "./djoser-runtime.sh cmd"
+  echo "./tcruntime.sh cmd"
   echo "  cmd is one of start | run | stop | restart | status"
   echo "    start             - starts a tc Runtime instance as a daemon process"
   echo "    run               - starts a tc Runtime instance as a foreground process"
